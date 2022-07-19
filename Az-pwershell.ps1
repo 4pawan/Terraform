@@ -23,7 +23,10 @@ $VirtualMachine = Add-AzVMNetworkInterface -VM $VirtualMachine -Id $NIC.Id
 $VirtualMachine = Set-AzVMBootDiagnostic -VM $VirtualMachine  -Disable 
 $VirtualMachine = Set-AzVMSourceImage -VM $VirtualMachine -PublisherName 'MicrosoftWindowsDesktop' -Offer 'Windows-10' -Skus 'win10-21h2-pro' -Version latest
 New-AzVm -ResourceGroupName $rgName -Location $location -VM $VirtualMachine
-    
+
+$ap=New-AzAppServicePlan -Name 'ar5r6psrpln' -Location $location -ResourceGroupName $rgName -Tier 'sdsd'
+$webApp= New-AzWebApp -ResourceGroupName $rgName -Name "ContosoSitet5r43" -Location $location -AppServicePlan "ContosoServicePlan" `
+
 
 #######
 Get-AzVMImageOffer -Location $location -PublisherName 'MicrosoftWindowsDesktop'
