@@ -5,10 +5,10 @@ $publicIp = New-AzPublicIpAddress -Name 'piblicApAddres_test' -ResourceGroupName
 $subnet = New-AzVirtualNetworkSubnetConfig -Name ApplicationSubnet -AddressPrefix "10.0.1.0/24"
 $vn = New-AzVirtualNetwork -Name 'MyVirtualNetwork' -ResourceGroupName $rg.ResourceGroupName -Location $rg.Location -AddressPrefix "10.0.0.0/16" -Subnet $subnet
 
-$adminPassword ="pass123!@#"
-$rgName ="18_07_rg1"
+$adminPassword ="########"
+$rgName ="#######"
 $location="southcentralus"
-$UserName = "demoUsr"
+$UserName = "########"
 $Password = ConvertTo-SecureString $adminPassword  -AsPlainText -Force
 $psCred = New-Object System.Management.Automation.PSCredential($UserName, $Password)
 
